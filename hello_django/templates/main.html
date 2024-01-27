@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script>
+        const fileUpload = (event) => {
+    const files = event.target.files;
+    const filesLength = files.length;
+    if (filesLength > 0) {
+      const imageSrc = URL.createObjectURL(files[0]);
+      const imagePreviewElement = document.querySelector("#tb-image");
+      imagePreviewElement.src = imageSrc;
+      imagePreviewElement.style.display = "block";
+    }
+  };
+    </script>
+    <style>
+        html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ background: #2b5876;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);;
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+a {
+  text-align: center;
+  color: #252525;
+  text-align: center;
+  color: #ffffff;
+  width:100%;
+}
+h1 {
+  margin-right:auto;
+  margin-left:auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #ffffff;
+  width:50%;
+}
+.tb-img-view {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.tb-container {
+  width: 100%;
+  margin: 4em auto;
+  position:relative;
+}
+.tb-container img {
+  width: 200px;
+  height: auto;
+  display: none;
+  margin-bottom: 30px;
+}
+.tb-container input {
+  display: none;
+}
+.tb-container label {
+  width: 200px;
+  height: 45px;
+  background: #2f9c74;
+  color: #ffffff;
+  font-size: 15px;
+  text-transform: capitalize;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0 auto;
+}
+
+    </style>
+<a href="//techiebundle.com/creating-a-stylish-file-upload-button-with-css-and-image-preview-feature/" target="_blank">
+<link rel="stylesheet" href="C:\Users\noob\Documents\project_dj\hello_django\static\CSS\style.css">
+</head> 
+
+<body>
+<h2> </h2>
+  </a>
+  <h1>Select The Image File</h1>
+  <div class="tb-container">
+    <div class="tb-img-view">
+      <img id="tb-image" />
+    </div>
+    <label for="tb-file-upload">Upload Image</label>
+    <input type="file" id="tb-file-upload" accept="image/*" onchange="fileUpload(event);" />
+  </div>
+</body>
+  </html>
